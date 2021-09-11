@@ -50,7 +50,7 @@ function lovense.GetToys()
     local found = lovense.Connect()
     if not found then return end
 
-    local body = http.request( lovense.domain )
+    local body = http.request( lovense.domain .. "GetToys" )
 
     local result = json.decode( body )
     local toys = {}
